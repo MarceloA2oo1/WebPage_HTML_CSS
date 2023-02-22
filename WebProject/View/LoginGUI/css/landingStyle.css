@@ -1,0 +1,596 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*
+nav {
+    display: flex;
+    position: absolute;
+    z-index: 201;
+    justify-content: right;
+    align-items: flex-end;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: right;
+    padding: 0;
+}
+
+nav a {
+    display: inline;
+    padding: 10px 20px;
+    color: black;
+    text-decoration: none;
+    font-size: 32px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+*/
+ul {
+    list-style-type: none;
+    padding: 0.5rem;
+    overflow: hidden;
+    background-color: transparent;
+    position: relative;
+    z-index: 250;
+    float: right;
+    margin-right: 5px;
+}
+
+/* Estilo para los elementos li dentro de la lista */
+li {
+    float: left;
+}
+
+.show {
+    display: none
+}
+
+/* Estilo para los enlaces dentro de los elementos li */
+li a {
+    display: block;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    padding: 14px 24px;
+    text-decoration: none;
+}
+
+/* Estilo para los enlaces cuando el cursor está sobre ellos */
+li a:hover {
+    background-color: #48A377;
+    border-radius: 25px;
+}
+
+/*diseño del boton*/
+.btn {
+    position: absolute;
+    top: 50%;
+    bottom: 0;
+    left: 0;
+    right: 10%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 150px;
+    background-color: #80DCBB;
+    color: #000;
+    border-color: transparent;
+    border-radius: 25px;
+    font-size: 18px;
+    text-align: center;
+    margin: 50px auto;
+    transition: all 0.2s ease-in-out;
+    z-index: 201;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+/**/
+.text1 {
+    position: absolute;
+    font-size: 84px;
+    left: 12%;
+    top: 15%;
+    z-index: 250;
+}
+
+.text2 {
+    position: absolute;
+    font-weight: bold;
+    font-size: 84px;
+    width: 498px;
+    left: 12%;
+    top: 25%;
+    z-index: 250;
+}
+
+/*style typewriter*/
+.typing_effect {
+    margin: 15px auto;
+    width: 50px;
+    animation: teclear 3s steps(10), efecto .5s step-end alternate;
+}
+
+.typing_effect1 {
+    margin: 15px auto;
+    width: max-content;
+    border-right: 5px solid;
+    animation: teclear 2.5s steps(10), efecto .5s step-end infinite alternate;
+}
+
+@keyframes teclear {
+    from {
+        clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    }
+
+    to {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+}
+
+@keyframes efecto {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/*end*/
+
+/*logo*/
+.logo {
+    position: absolute;
+    width: 28.71px;
+    height: 48px;
+    left: 9%;
+    top: 20%;
+    z-index: 205;
+}
+
+/**/
+.container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+section {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: block;
+}
+
+section .waveI1 {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 65%;
+    height: 105%;
+    background-size: 1000px 1000px;
+}
+
+section .waveI1.wave1 {
+    display: block;
+    background: url(/View/LoginGUI/img/lading/waveIz3.svg);
+    animation: animate 5s linear infinite;
+    z-index: 200;
+    opacity: 1;
+    animation-delay: 0.5s;
+    bottom: 0;
+}
+
+section .waveD1 {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 60%;
+    height: 105%;
+}
+
+section .waveD1.waveD1 {
+    background: url(/View/LoginGUI/img/lading/waveD3.svg);
+    animation: animate 5s linear infinite;
+    z-index: 200;
+    opacity: 1;
+    animation-delay: 0.5s;
+    bottom: 0;
+}
+
+section .waveI2 {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50%;
+    height: 720px;
+}
+
+section .waveI2.wave2 {
+    background: url(/View/LoginGUI/img/lading/waveIz2.svg);
+    animation: animate2 5.5s linear infinite;
+    z-index: 201;
+    opacity: 1;
+    animation-delay: 0.8s;
+    bottom: 0;
+}
+
+section .waveI3 {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 35%;
+    height: 617px;
+}
+
+section .waveI3.wave3 {
+    background: url(/View/LoginGUI/img/lading/waveIz1.svg);
+    animation: animate3 5s linear infinite;
+    z-index: 201;
+    opacity: 1;
+    animation-delay: 0.5s;
+    bottom: 0;
+}
+
+section .waveD2 {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    height: 104%;
+}
+
+section .waveD2.waveD2 {
+    background: url(/View/LoginGUI/img/lading/waveD2.svg);
+    animation: animate 5.5s linear infinite;
+    z-index: 200;
+    opacity: 1;
+    animation-delay: 0.8s;
+    bottom: 0;
+}
+
+section .waveD3 {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 41%;
+    height: 100%;
+}
+
+section .waveD3.waveD3 {
+    background: url(/View/LoginGUI/img/lading/waveD1.svg);
+    animation: animate2 5s linear infinite;
+    z-index: 200;
+    opacity: 1;
+    animation-delay: 0.5s;
+    bottom: 0;
+}
+
+section .waveM {
+    background: url(/View/LoginGUI/img/lading/waveM.svg);
+    position: absolute;
+    right: 175px;
+    top: 15px;
+    width: 95px;
+    height: 90px;
+    z-index: 202;
+    opacity: 1;
+}
+
+/*------Mobil----------------------*/
+.sect {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: none;
+}
+
+.sect .waveM1 {
+    display: block;
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+    width: 105%;
+    height: 200px;
+}
+
+.sect .waveM1.waveMobil1 {
+    animation: animateMobil 5s linear infinite;
+    z-index: 201;
+    opacity: 1;
+    animation-delay: 0.5s;
+    background: url(/View/LoginGUI/img/lading/waveMobil1.svg);
+}
+
+.sect .waveM2 {
+    display: block;
+    position: absolute;
+    left: 0%;
+    bottom: 0%;
+    width: 105%;
+    height: 200px;
+}
+
+.sect .waveM2.waveMobil2 {
+    animation: animateMobil2 5s linear infinite;
+    z-index: 200;
+    opacity: 1;
+    animation-delay: 0.5s;
+    background: url(/View/LoginGUI/img/lading/waveMobil2.svg);
+}
+
+.sect .waveM3 {
+    display: block;
+    position: absolute;
+    right: -2%;
+    bottom: 0%;
+    width: 105%;
+    height: 270px;
+}
+
+.sect .waveM3.waveMobil3 {
+    animation: animateMobil 5s linear infinite;
+    z-index: 199;
+    opacity: 1;
+    animation-delay: 0.5s;
+    background: url(/View/LoginGUI/img/lading/waveMobil3.svg);
+    fill: #48A377;
+}
+
+/*--------------end---------------*/
+@media screen and (max-width: 2050px) {
+    .container {
+        grid-gap: 5rem;
+    }
+
+    .show{
+        display: block;
+    }
+
+}
+
+@media screen and (max-width: 1050px) {
+    .container {
+        grid-gap: 5rem;
+    }
+
+    .show{
+        display: block;
+    }
+
+}
+
+@media screen and (max-width: 1000px) {
+    .container {
+        display: none;
+    }
+
+    .btn {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+    }
+
+    .logo {
+        position: absolute;
+        width: 28.71px;
+        height: 48px;
+        left: 15%;
+        top: 30%;
+    }
+
+    .text1 {
+        position: absolute;
+        font-size: 84px;
+        left: 20%;
+        top: 25%;
+    }
+
+    .text2 {
+        position: absolute;
+        font-weight: bold;
+        font-size: 84px;
+        left: 20%;
+        top: 35%;
+    }
+
+    li a {
+        color: black;
+    }
+
+    li a:hover {
+        background-color: #65c496;
+    }
+
+    a .show {
+        display: block;
+    }
+
+    .sect {
+        display: block;
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+    .container {
+        grid-gap: 5rem;
+    }
+
+    .btn {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+    }
+
+    .logo {
+        position: absolute;
+        width: 28.71px;
+        height: 48px;
+        left: 10%;
+        top: 30%;
+    }
+
+    .text1 {
+        position: absolute;
+        font-size: 84px;
+        left: 15%;
+        top: 25%;
+    }
+
+    .text2 {
+        position: absolute;
+        font-weight: bold;
+        font-size: 84px;
+        left: 15%;
+        top: 35%;
+    }
+
+    .sect {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .container {
+        grid-gap: 5rem;
+    }
+
+    .btn {
+        position: absolute;
+        top: 40%;
+        left: 18%;
+    }
+
+    .logo {
+        position: absolute;
+        width: 28.71px;
+        height: 48px;
+        left: 25%;
+        top: 20%;
+    }
+
+    .text1 {
+        position: absolute;
+        font-size: 84px;
+        left: 30%;
+        top: 15%;
+    }
+
+    .text2 {
+        position: absolute;
+        font-weight: bold;
+        font-size: 84px;
+        left: 30%;
+        top: 25%;
+    }
+
+    li a {
+        color: black;
+        background-color: #e0fdf2;
+        border-radius: 25px;
+    }
+
+    li a:hover {
+        background-color: #65c496;
+    }
+
+    .show{
+        display: none;
+    }
+    .show.a4{
+        display: block;
+    }
+    .sect {
+        display: block;
+    }
+
+}
+
+@keyframes animateMobil {
+    0% {
+        background-position-x: -40px;
+    }
+
+    50% {
+        background-position-x: 5px;
+    }
+
+    100% {
+        background-position-x: -40px;
+    }
+}
+
+@keyframes animateMobil2 {
+    0% {
+        background-position-x: 0;
+    }
+
+    50% {
+        background-position-x: -40px;
+    }
+
+    100% {
+        background-position-x: 0px;
+    }
+}
+
+@keyframes animate {
+    0% {
+        background-position-y: 0;
+    }
+
+    50% {
+        background-position-y: 35px;
+    }
+
+    100% {
+        background-position-y: 0px;
+    }
+}
+
+@keyframes animate2 {
+    0% {
+        background-position-y: 0;
+    }
+
+    50% {
+        background-position-y: -40px;
+    }
+
+    100% {
+        background-position-y: 0px;
+    }
+}
+
+@keyframes animate3 {
+    0% {
+        background-position-y: 5;
+    }
+
+    25% {
+        background-position-y: 0;
+    }
+
+    50% {
+        background-position-y: -20px;
+    }
+
+    100% {
+        background-position-y: 0px;
+    }
+}
